@@ -1,0 +1,29 @@
+{
+  "name": "gt-cli",
+  "version": "1.0.0",
+  "description": "一个自己的前端脚手架",
+  "main": "index.js",
+  "bin": {
+    "gt-cli": "./bin/gt",
+    "gt": "./bin/gt"
+  },
+  "scripts": {
+    "lint": "eslint src",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/lotosv2010/gt-cli.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/lotosv2010/gt-cli/issues"
+  },
+  "homepage": "https://github.com/lotosv2010/gt-cli#readme",
+  "devDependencies": {
+    "eslint": "^7.18.0",
+    "husky": "^4.3.8"
+  }
+}
