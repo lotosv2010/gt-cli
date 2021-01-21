@@ -25,5 +25,8 @@
   "devDependencies": {
     "eslint": "^7.18.0",
     "husky": "^4.3.8"
+  },
+  "dependencies": {
+    "axios": "^0.21.1"
   }
 }
