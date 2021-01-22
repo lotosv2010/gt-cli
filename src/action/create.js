@@ -18,12 +18,14 @@ downLoadGitRepo = promisify(downLoadGitRepo);
 const downloadDirectory = `${process.env[process.platform === 'darwin' ? 'HOME' : 'USERPROFILE']}/.template`;
 
 // 获取仓库列表
+const config = require('./config');
+const repoUrl = config('getVal', 'repo');
 const fetchRepoList = async() => {
   // 获取当前组织中的所有仓库信息,这个仓库中存放的都是项目模板
-  let { data } = await axios.get('https://api.github.com/orgs/gt-cli/repos')
+  let { data } = await axios.get(`https://api.github.com/orgs/${repoUrl}/repos`)
   return data
-
 }
+
 // 获取所有tag
 const fetchTagList = async (repo) => {
   const { data } = await axios.get(`https://api.github.com/repos/gt-cli/${repo}/tags`)

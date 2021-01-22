@@ -16,13 +16,16 @@ program
 
 // 配置配置文件
 program
-  .command('config <value>') // 命令名称
+  .command('config [value]') // 命令名称
   .description('inspect and modify the config') // 命令的描述
   .option('-g, --get <path>', 'get value from option')
   .option('-s, --set <path> <value>', 'set value to config')
   .option('-d, --delete <path>', 'delete option from config')
-  .action((name, cmd) => { // 动作
-    console.log(name, cmd)
+  .action((v, cmd) => { // 动作
+    if(!cmd || cmd && Object.keys(cmd).keys().length === 0) return
+    const a = Object.keys(cmd)[0]
+    const k = cmd[a]
+    require(path.resolve(__dirname, 'action', 'config'))(a, k, v);
   })
   .alias('c') // 命令的别名
 
