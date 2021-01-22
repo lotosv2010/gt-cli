@@ -1,0 +1,23 @@
+# 忽略目录
+examples/
+packages/
+public/
+config/
+docs/
+tests/
+node_modules/
+
+ 
+# 忽略指定文件
+.browserslistrc
+.travis.yml
+.eslintrc.js
+vue.config.js
+babel.config.js
+deploy.sh
+karma.conf.js
+README.md
+tsconfig.json
+yarn.lock
+package.json
+*.map
